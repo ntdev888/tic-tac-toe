@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.v1_2 {
+  width: 100%;
+  height: 832px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.appbox {
+  width: 493px;
+  height: 318px;
+  background: rgba(43,86,171,1);
+  opacity: 1;
+  position: absolute;
+  top: 257px;
+  left: 393px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.title {
+  width: 419px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 285px;
+  left: 430px;
+  font-family: IBM Plex Mono;
+  font-weight: Regular;
+  font-size: 40px;
+  opacity: 1;
+  text-align: left;
+}
+.app {
+  width: 292px;
+  height: 155px;
+  background: rgba(248,246,246,1);
+  opacity: 1;
+  position: absolute;
+  top: 369px;
+  left: 494px;
+  border: 1px solid rgba(0,0,0,1);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
