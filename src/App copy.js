@@ -32,7 +32,6 @@ function Board() {
 
   return (
   <>
-  <div>
   <div className="board-row">
     <Square value={squares[0]} onSquareClick={() => handleClick(0)} id="1"/>
     <Square value={squares[1]} onSquareClick={() => handleClick(1)} id="2"/>
@@ -48,7 +47,6 @@ function Board() {
     <Square value={squares[7]} onSquareClick={() => handleClick(7)} id="7"/>
     <Square value={squares[8]} onSquareClick={() => handleClick(8)} id="8"/>
     </div>
-    </div>
     </>
   )
 }
@@ -59,12 +57,9 @@ function App() {
   return (
     <>
     <div className="container">
-    <div className="tictactoeapp">    
-    <span className="title">Nics Tic-Tac-Toe App</span>
-    <div className="app"><Board /></div>
-    <div className="title">Win Condition</div>
+    <div className="tictactoeapp"><Board /></div>
     </div>
-    </div>
+    
     </>
   );
 }
