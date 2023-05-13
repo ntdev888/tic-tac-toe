@@ -116,10 +116,11 @@ ul {
 
 .title {
   width: 419px;
+  padding: 20px;
   color: rgba(255,255,255,1);
   font-family: IBM Plex Mono;
   font-weight: Regular;
-  font-size: 40px;
+  font-size: 30px;
   opacity: 1;
   text-align: center;
   margin-left: auto;
