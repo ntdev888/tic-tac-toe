@@ -12,7 +12,7 @@ function Square({ value, onSquareClick }) {
  
 
 
-function Board() {
+function Board({ msg, win }) {
   const [ xIsNext, setXIsNext ] = useState(true)
   const [ squares, setSquares] = useState(Array(9).fill(null));
 
@@ -27,7 +27,9 @@ function Board() {
       nextSquares[i] = 'O';
     }
     setSquares(nextSquares);
+    win(nextSquares, xIsNext);
     setXIsNext(!xIsNext);
+    msg(nextSquares);
   };
 
   return (
@@ -56,16 +58,74 @@ function Board() {
 
 
 function App() {
+  const [ winner, setWinner ] = useState(null);
+
+  function isWinner(value, current) {
+    const winConditions = [
+      [0, 1, 2], // Rows
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6], // Columns
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8], // Diagonals
+      [2, 4, 6]
+    ];
+    
+    if (current == true) {
+    const newArray = value.map((element, index) => {
+      if (element === 'X') {
+        return index;
+      }
+    }).filter(index => index !== undefined);
+    
+    const isWin = winConditions.some(condition =>
+      condition.every(index => newArray.includes(index))
+    );
+    
+    if (isWin) {
+    console.log('X'); // Output: X
+    setWinner('X');
+    };
+    }
+
+    if (current == false) {
+      const newArray = value.map((element, index) => {
+        if (element === 'O') {
+          return index;
+        }
+      }).filter(index => index !== undefined);
+      
+      const isWin = winConditions.some(condition =>
+        condition.every(index => newArray.includes(index))
+      );
+      
+      if (isWin) {
+      console.log('O'); // Output: O
+      setWinner('O');
+      }
+      }
+  };
+
+    
+
+
+
+
+  function deepMessage(input) {
+    return console.log('square are ' + JSON.stringify(input));
+  };
+
   return (
     <>
     <div className="container">
     <div className="tictactoeapp">    
     <span className="title">Nics Tic-Tac-Toe App</span>
-    <div className="app"><Board /></div>
-    <div className="title">Win Condition</div>
+    <div className="app"><Board win={(value, current) => isWinner(value, current)} msg={(input) => deepMessage(input)}/></div>
+    <div className="title">Win Condition: {winner} </div>
     </div>
     </div>
-    </>
+  </>
   );
 }
 
