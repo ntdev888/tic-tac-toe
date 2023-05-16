@@ -118,7 +118,8 @@ function App() {
     <div className="tictactoeapp">    
     <span className="title">Nics Tic-Tac-Toe App</span>
     <div className="app"><Board win={(value, current) => isWinner(value, current)} msg={(input) => deepMessage(input)}/></div>
-    <div className="title">Win Condition: {winner} </div>
+    <div className="title">Winner: {winner} </div>
+    <div><button className="refresh reload" onClick={() => window.location.reload(false)}>Reload Game</button></div>
     </div>
     </div>
   </>

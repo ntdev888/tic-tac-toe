@@ -63,7 +63,7 @@ ul {
 .tictactoeapp { 
   grid-area: app;
   width: 493px;
-  height: 318px;
+  height: 418px;
   background: rgba(43,86,171,1);
   opacity: 1;
   border-top-left-radius: 20px;
@@ -80,6 +80,18 @@ ul {
   -webkit-animation: fadein 2s; /* Safari and Chrome */
   -o-animation: fadein 2s; /* Opera */
 }
+
+.refresh {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: aquamarine;
+}
+
 
 @keyframes fadein {
   from {
@@ -121,6 +133,19 @@ ul {
   font-family: IBM Plex Mono;
   font-weight: Regular;
   font-size: 30px;
+  opacity: 1;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reload {
+  width: 419px;
+  padding: 20px;
+  color: grey;
+  font-family: IBM Plex Mono;
+  font-weight: Regular;
+  font-size: 25px;
   opacity: 1;
   text-align: center;
   margin-left: auto;
