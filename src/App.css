@@ -200,3 +200,15 @@ ul {
 .game-info {
   margin-left: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+  .tictactoeapp {
+    width: 98%
+  }
+  .app {
+    width: 80%;
+  }
+  .reload {
+    width: 78%;
+  }
+}
